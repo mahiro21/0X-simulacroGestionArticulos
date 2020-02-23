@@ -16,10 +16,7 @@
 package org.japo.java.libraries;
 
 import org.japo.java.entities.ListaArticulos;
-import java.util.Locale;
-import java.util.Scanner;
 import org.japo.java.entities.Articulos;
-import org.japo.java.libraries.UtilesEntrada;
 
 /**
  *
@@ -27,10 +24,9 @@ import org.japo.java.libraries.UtilesEntrada;
  */
 public class UtilesComandos {
 
-    public static final Scanner SCN
-            = new Scanner(System.in, "ISO-8859-1")
-                    .useLocale(Locale.ENGLISH).useDelimiter("\\s+");
-
+//    public static final Scanner SCN
+//            = new Scanner(System.in, "ISO-8859-1")
+//                    .useLocale(Locale.ENGLISH).useDelimiter("\\s+");
     public static int p = 0;
 
     public static final void comandoAlta() {
