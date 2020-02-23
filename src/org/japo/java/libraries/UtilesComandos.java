@@ -37,10 +37,10 @@ public class UtilesComandos {
         boolean continuar = false;
         do {
 
-            System.out.print("Nombre del articulo ..:");
+            System.out.print("Nombre del articulo ..: ");
             String nombre = UtilesEntrada.obtenerString();
             if (!validarNombreUnico(nombre)) {
-                System.out.print("Precio del articulo ..:");
+                System.out.print("Precio del articulo ..: ");
                 double precio = UtilesEntrada.obtenerDouble();
                 ListaArticulos.articulos.add(new Articulos(nombre, precio));
                 continuar = true;
@@ -69,10 +69,10 @@ public class UtilesComandos {
             boolean coincide = ListaArticulos.articulos.get(i).getNombre().equals(str);
             if (coincide) {
                 int id = i;
-                System.out.printf("Nombre del articulo ..: %s%n",
-                        ListaArticulos.articulos.get(i).getNombre());
-                System.out.printf("Precio del articulo ..: %s%n",
-                        ListaArticulos.articulos.get(i).getPrecio());
+                System.out.printf("%s - %.2f€%n",
+                        ListaArticulos.articulos.get(id).getNombre(),
+                        ListaArticulos.articulos.get(id).getPrecio());
+
             }
         }
 
@@ -85,23 +85,21 @@ public class UtilesComandos {
             boolean coincide = ListaArticulos.articulos.get(i).getNombre().equals(str);
             if (coincide) {
                 int id = i;
-                System.out.print("Nombre del articulo ..:");
+                System.out.print("Nombre del articulo ..: ");
                 String nombre = UtilesEntrada.obtenerString();
-                System.out.print("Precio del articulo ..:");
+                System.out.print("Precio del articulo ..: ");
                 double precio = UtilesEntrada.obtenerDouble();
-                ListaArticulos.articulos.get(i).setNombre(nombre);
-                ListaArticulos.articulos.get(i).setPrecio(precio);
+                ListaArticulos.articulos.get(id).setNombre(nombre);
+                ListaArticulos.articulos.get(id).setPrecio(precio);
             }
         }
     }
 
     public static final void comandoLista() {
         for (int i = 0; i < ListaArticulos.articulos.size(); i++) {
-            System.out.printf("Nombre del articulo ..: %s%n",
-                    ListaArticulos.articulos.get(i).getNombre());
-            System.out.printf("Precio del articulo ..: %s%n",
+            System.out.printf("%s - %.2f€%n",
+                    ListaArticulos.articulos.get(i).getNombre(),
                     ListaArticulos.articulos.get(i).getPrecio());
-            System.out.printf("%n---%n%n");
 
         }
     }

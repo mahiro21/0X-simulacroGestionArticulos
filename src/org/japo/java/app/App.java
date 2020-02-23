@@ -28,7 +28,7 @@ public final class App {
 
     public final void launchApp() {
 
-        ArrayList<Articulos> articulos = new ArrayList<>();
+
 
         System.out.println("Menú de gestión de artículos");
         System.out.println("============================");
